@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>upload demo</title>
+    <link href="http://hayageek.github.io/jQuery-Upload-File/4.0.10/uploadfile.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://hayageek.github.io/jQuery-Upload-File/4.0.10/jquery.uploadfile.min.js"></script>
+</head>
+
+<body>
+    <div id="fileuploader">Upload</div>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#fileuploader").uploadFile({
+            url: "/upload",
+            multiple: true,
+            dragDrop: true,
+            maxFileCount: 2,
+            fileName: "myfile"
+        });
+    })
+</script>
+
+</html>
